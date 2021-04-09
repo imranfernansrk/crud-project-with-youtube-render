@@ -2,7 +2,7 @@
   "name": "crud-app",
   "version": "0.1.0",
   "private": true,
-  "homepage":"http://imranfernansrk.github.io/curd-project-with-youtube-render",
+  "homepage": "http://imranfernansrk.github.io/curd-project-with-youtube-render",
   "dependencies": {
     "@material-ui/core": "^4.11.3",
     "@material-ui/icons": "^4.11.2",

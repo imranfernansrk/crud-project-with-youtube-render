@@ -6,7 +6,7 @@ const Homepage = (): JSX.Element => {
     return(
         <div>
             <div>
-                <Link to="/login">Login Page</Link>
+                <Link to="/login">Youtube Render</Link>
             </div>
             <div>
                 <TodosList />

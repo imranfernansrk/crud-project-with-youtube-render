@@ -82,47 +82,52 @@ const todoState: any = {todoReducer: {
     error: ''
 }}
 // todoReducer(todoState, {type:'TODO_FETCH_SUCCESS',payload:[{id:1,userId:10,completed:true,title:'imran'}]});
-afterEach(()=>{
-    cleanup();
-})
-const todoReducer = (state: StateModel.todoStateObject = todoState, action: StateModel.actionsObject): StateModel.todoStateObject => {
-    switch (action.type) {
-        case Types.TODO_FETCH_REQUEST:
-            return {
-                ...state,
-                loading: true
-            }
-            case Types.TODO_POST_SUCCESS:
-                return {
-                    ...state,
-                    loading: false,
-                    datas: [...state.datas, action.payload],
-                    error: ''
-                }
-            case Types.TODO_POST_FAILURE:
-                return {
-                    ...state,
-                    loading: false,
-                    error: action.payload
-                }
-        default: return state
-        }
-}
-const renderWithRedux = (component: any,
-    {
-        initialState,
-        store = createStore(todoReducer, middleware, initialState)
-    }={}) => {
-    return {
-        ...render(<MemoryRouter>
-            <Provider store={store}>{component}</Provider>
-        </MemoryRouter>)
-    }
-}
+
+// const todoReducer = (state: StateModel.todoStateObject = todoState, action: StateModel.actionsObject): StateModel.todoStateObject => {
+//     switch (action.type) {
+//         case Types.TODO_FETCH_REQUEST:
+//             return {
+//                 ...state,
+//                 loading: true
+//             }
+//             case Types.TODO_POST_SUCCESS:
+//                 return {
+//                     ...state,
+//                     loading: false,
+//                     datas: [...state.datas, action.payload],
+//                     error: ''
+//                 }
+//             case Types.TODO_POST_FAILURE:
+//                 return {
+//                     ...state,
+//                     loading: false,
+//                     error: action.payload
+//                 }
+//         default: return state
+//         }
+// }
+// const renderWithRedux = (component: any,
+//     {
+//         initialState,
+//         store = createStore(todoReducer, middleware, initialState)
+//     }={}) => {
+//     return {
+//         ...render(<MemoryRouter>
+//             <Provider store={store}>{component}</Provider>
+//         </MemoryRouter>)
+//     }
+// }
 describe('Create new Todo with redux',()=>{
+    const renderWithRedux = (component: JSX.Element, store: any) => {
+        return {
+            ...render(<MemoryRouter>
+                <Provider store={store}>{component}</Provider>
+            </MemoryRouter>)
+        }
+    }
     it('render success',()=>{
         const mockfn = jest.fn();
-        renderWithRedux(<CreateNewTodo {...mockfn} />);
+        renderWithRedux(<CreateNewTodo {...mockfn} />, store);
     })
     it('create new todo submit success', () =>{
         // act(()=>{
@@ -144,7 +149,7 @@ describe('Create new Todo with redux',()=>{
         //     }))
         // });
         const mockfn = jest.fn();
-        const newTodo = renderWithRedux(<CreateNewTodo {...mockfn} />);
+        const newTodo = renderWithRedux(<CreateNewTodo {...mockfn} />, store);
         const submitBtn = newTodo.getByTestId('create-todo-submit');
         fireEvent.submit(submitBtn);
 
