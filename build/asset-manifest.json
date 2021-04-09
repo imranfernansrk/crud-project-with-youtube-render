@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/curd-project-with-youtube-render/static/css/main.6dea0f05.chunk.css",
+    "main.js": "/curd-project-with-youtube-render/static/js/main.d3992a7a.chunk.js",
+    "main.js.map": "/curd-project-with-youtube-render/static/js/main.d3992a7a.chunk.js.map",
+    "runtime-main.js": "/curd-project-with-youtube-render/static/js/runtime-main.941b9198.js",
+    "runtime-main.js.map": "/curd-project-with-youtube-render/static/js/runtime-main.941b9198.js.map",
+    "static/css/2.4c97ca4f.chunk.css": "/curd-project-with-youtube-render/static/css/2.4c97ca4f.chunk.css",
+    "static/js/2.fae306dc.chunk.js": "/curd-project-with-youtube-render/static/js/2.fae306dc.chunk.js",
+    "static/js/2.fae306dc.chunk.js.map": "/curd-project-with-youtube-render/static/js/2.fae306dc.chunk.js.map",
+    "static/js/3.0e262c40.chunk.js": "/curd-project-with-youtube-render/static/js/3.0e262c40.chunk.js",
+    "static/js/3.0e262c40.chunk.js.map": "/curd-project-with-youtube-render/static/js/3.0e262c40.chunk.js.map",
+    "index.html": "/curd-project-with-youtube-render/index.html",
+    "static/css/2.4c97ca4f.chunk.css.map": "/curd-project-with-youtube-render/static/css/2.4c97ca4f.chunk.css.map",
+    "static/css/main.6dea0f05.chunk.css.map": "/curd-project-with-youtube-render/static/css/main.6dea0f05.chunk.css.map",
+    "static/js/2.fae306dc.chunk.js.LICENSE.txt": "/curd-project-with-youtube-render/static/js/2.fae306dc.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.941b9198.js",
+    "static/css/2.4c97ca4f.chunk.css",
+    "static/js/2.fae306dc.chunk.js",
+    "static/css/main.6dea0f05.chunk.css",
+    "static/js/main.d3992a7a.chunk.js"
+  ]
+}
